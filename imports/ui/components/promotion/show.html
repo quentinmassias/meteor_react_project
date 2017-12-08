@@ -1,0 +1,11 @@
+<template name="promotions_show">
+    {{#if Template.subscriptionsReady}}
+        {{#if promotion}}
+            {{#each promotion}}
+                <h2>Promotion: {{ name }}</h2>
+    {{/each}}
+        {{else}}
+            {{> App_notFound}}
+        {{/if}}
+    {{/if}}
+</template>

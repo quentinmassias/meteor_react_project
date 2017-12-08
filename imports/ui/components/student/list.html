@@ -1,0 +1,9 @@
+<template name="show_students">
+    <h2>Liste des élèves</h2>
+
+    <ul>
+        {{#each students}}
+        <li>{{ firstName }} {{ lastName }}</li>
+        {{/each}}
+    </ul>
+</template>

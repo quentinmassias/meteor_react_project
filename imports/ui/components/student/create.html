@@ -1,0 +1,14 @@
+<template name="create_student">
+    <h2>Créer un élève</h2>
+
+    <form id="c-student">
+        <input type="text" class="first-name"/>
+        <input type="text" class="last-name"/>
+        <select class="promotion">
+            {{#each promotions}}
+            <option value="{{ _id }}">{{ name }}</option>
+            {{/each}}
+        </select>
+        <input type="submit"/>
+    </form>
+</template>

@@ -1,0 +1,38 @@
+<template name="create_grades">
+    <h2>Ajouter des notes</h2>
+
+    <form id="c-grade">
+        <select class="promotion">
+            {{#each promotions}}
+            <option value="{{ _id }}">{{ name }}</option>
+            {{/each}}
+        </select>
+
+        <select class="assignment">
+            {{#each assignments}}
+            <option value="{{ _id }}">{{ entitled }}</option>
+            {{/each}}
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each students}}
+                <tr class="student" data-student="{{ _id }}">
+                    <td>{{ lastName }}</td>
+                    <td>{{ firstName }}</td>
+                    <td><input type="number" class="grade"/></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+        <input type="submit"/>
+    </form>
+</template>
